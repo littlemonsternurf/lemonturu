@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Cinta</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00BFFF;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #00BFFF;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .heart {
+            font-size: 50px;
+            color: red;
+            animation: heartbeat 1s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .custom-alert {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #00BFFF;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .romantic-text {
+            font-size: 24px;
+            margin-top: 20px;
+            animation: fadeIn 3s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .scrolling-text {
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            animation: scrollText 10s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .romantic-text {
+                font-size: 18px;
+            }
+
+            .heart {
+                font-size: 40px;
+            }
+
+            .custom-alert {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="lemonturu.html">FROM DESI</a>
+    </div>
+    <div class="container">
+        <h1>SELAMAT DATANG DI WEB CINTA DADAKAN YA</h1>
+        <p class="romantic-text">Halo Ardian! ✨</p>
+        <p class="scrolling-text">Hai Sayang, Aku sayang Kamu ❤️</p>
+    </div>
+
+    <p>Klik hati di bawah ini!</p>
+    <div class="heart" onclick="showAlert()">❤️</div>
+
+    <div id="customAlert" class="custom-alert">
+        <p>Hai sayang, Aku minta maaf ya sama kamu. aku sering buat kamu marah <br>
+            aku juga sering tidak ada kabar dan kamu harus tau aku cinta banget sama kamu <br>
+            lebih dari apapun, dan kamu tidak usah meragukan perasaan aku oke? <br>
+            LOVE YOU SAYANG ❤️
+        </p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+
+    <script>
+        function showAlert() {
+            document.getElementById("customAlert").style.display = "block";
+        }
+        function closeAlert() {
+            document.getElementById("customAlert").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
